@@ -1,9 +1,10 @@
 {
-  "neo": {
-    "installType": "application"
-  },
   "name": "neo-hello",
   "version": "1.0.0",
+  "main": "main.js",
+  "bin": {
+    "greeting": "hello.js"
+  },
   "scripts": {"greet": "hello.js"},
   "dependencies": {}
 }
