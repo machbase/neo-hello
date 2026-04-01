@@ -30,7 +30,7 @@ const COMMANDS = {
 	},
 	mustache: {
 		script: 'mustache_demo.js',
-		description: 'render a Mustache template',
+		description: 'npm dependency demo with Mustache',
 		usage: 'demo mustache [--template <text>] [--name <name>] [--company <name>] [--topic <text>] [--view <json>]',
 	},
 	readline: {
