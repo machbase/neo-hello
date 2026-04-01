@@ -28,6 +28,11 @@ const COMMANDS = {
 		description: 'Mach CLI query',
 		usage: 'demo machcli-query',
 	},
+	readline: {
+		script: 'readline.js',
+		description: 'interactive line input',
+		usage: 'demo readline [--auto <text>]',
+	},
 };
 
 function dirname(filePath) {

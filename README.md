@@ -9,6 +9,7 @@ Machbase Neo JSH runtime에서 동작하는 간단한 예제 패키지입니다.
 - `demo server --port <port>`: 예제 HTTP 서버 실행
 - `demo server-install --port <port>`: 서버 스크립트를 서비스로 등록
 - `demo machcli-query`: Machbase 조회 예제 실행
+- `demo readline [--auto <text>]`: `readline` 입력 예제 실행
 
 ## 실행 예시
 
@@ -16,11 +17,8 @@ Machbase Neo JSH runtime에서 동작하는 간단한 예제 패키지입니다.
 machbase-neo jsh main.js hello Neo
 machbase-neo jsh main.js argv sample
 machbase-neo jsh main.js server --port 7575
+machbase-neo jsh main.js readline --auto "hello neo"
 ```
-
-## 데모 영상
-
-- [docs/pkg-demo.mp4](docs/pkg-demo.mp4)
 
 ## 파일 구성
 
@@ -29,3 +27,4 @@ machbase-neo jsh main.js server --port 7575
 - `server.js`: HTTP API 예제
 - `server_install.js`: 서비스 설치 예제
 - `machcli_query.js`: Mach CLI 조회 예제
+- `readline.js`: readline 입력 예제
