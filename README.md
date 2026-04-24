@@ -10,6 +10,16 @@ JSH에서 아래 명령으로 `demo`를 설치합니다.
 pkg copy github.com/machbase/neo-demo /work/public/demo
 ```
 
+![install](./docs/neo-demo-install.jpg)
+
+설치가 완료되면 설치한 디렉터리 이름(이 예에서는 `demo`)이 명령어가 됩니다.
+
+```
+demo -h
+```
+
+![help](./docs/neo-demo-help.jpg)
+
 ## 포함된 예제
 
 - `demo hello [name]`: 간단한 인사 출력
@@ -22,9 +32,7 @@ pkg copy github.com/machbase/neo-demo /work/public/demo
 - `demo readline [--auto <text>]`: `readline` 입력 예제 실행
 
 `demo mustache` 는 이 저장소에서 외부 npm dependency 사용 가능 여부를 확인하기 위한 데모로,
-`pkg install` 로 설치된 npm dependency 가 JSH 런타임에서 실제로 `require('mustache')` 되어 동작하는지 확인하는 용도입니다.
-
-이 저장소는 데모 실행 재현성을 위해 `package-lock.json` 을 함께 관리합니다. npm dependency 버전을 고정해 환경별 설치 차이로 예제가 달라지거나 깨지는 일을 줄이기 위한 목적입니다.
+`pkg copy` 로 설치된 `demo` 애플리케이션의 npm dependency 가 JSH 런타임에서 실제로 `require('mustache')` 되어 동작하는지 확인하는 용도입니다.
 
 다른 JSH 패키지를 작성할 때도 같은 기준으로 판단할 수 있습니다.
 
@@ -35,15 +43,33 @@ pkg copy github.com/machbase/neo-demo /work/public/demo
 
 ## 실행 예시
 
+- hello
+
 ```sh
-machbase-neo jsh main.js hello Neo
-machbase-neo jsh main.js argv sample
-machbase-neo jsh main.js server --port 7575
-machbase-neo jsh main.js mustache --name Neo --topic "npm package demo"
-machbase-neo jsh main.js readline --auto "hello neo"
+demo hello Neo
+```
+
+![hello](./docs/neo-demo-hello.jpg)
+
+
+- mustache
+
+```sh
+demo mustache --name Neo --topic "npm package demo"
+```
+
+![mustache](./docs/neo-demo-mustache.jpg)
+
+- web server and frontend
+
+```
+demo server --port 7575
 ```
 
 서버를 실행한 뒤 브라우저에서 `http://127.0.0.1:7575/` 로 접속하면 엔드포인트 목록 페이지를 볼 수 있고, `http://127.0.0.1:7575/todo` 에서는 Mustache 템플릿으로 렌더링되는 간단한 웹 TODO 예제를 확인할 수 있습니다.
+
+![server](./docs/neo-demo-server.jpg)
+
 
 ## 파일 구성
 
