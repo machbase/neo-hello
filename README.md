@@ -7,7 +7,7 @@ Machbase Neo JSH runtime에서 동작하는 간단한 예제 패키지입니다.
 JSH에서 아래 명령으로 `demo`를 설치합니다.
 
 ```sh
-pkg install -g github.com/machbase/neo-demo
+pkg copy github.com/machbase/neo-demo /work/public/demo
 ```
 
 ## 포함된 예제
